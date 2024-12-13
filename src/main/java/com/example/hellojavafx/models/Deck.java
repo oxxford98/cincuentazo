@@ -6,9 +6,11 @@ import java.util.List;
 
 public class Deck {
     private List<Card> cards;
+    private List<Card> cardsUsed;
 
     public Deck() {
         cards = new ArrayList<>();
+        cardsUsed = new ArrayList<>();
         initializeDeck();
         shuffle();
     }
@@ -29,7 +31,7 @@ public class Deck {
                         value = -10;
                         break;
                     case "A":
-                        value = 1; // A can be 1 or 10, will handle in game logic
+                        value = 1;
                         break;
                     default:
                         value = Integer.parseInt(rank);
@@ -45,9 +47,19 @@ public class Deck {
 
     public Card drawCard() {
         if (cards.isEmpty()) {
-            return null;
+            addCardUsedToDeck();
         }
         return cards.remove(0);
+    }
+
+    public void addCardUsedToDeck() {
+        cards.addAll(cardsUsed.subList(0, cardsUsed.size() - 1));
+        cardsUsed.clear();
+        shuffle();
+    }
+
+    public void addCardToUsed(Card card) {
+        cardsUsed.add(card);
     }
 
     public void addCardsToBottom(List<Card> newCards) {

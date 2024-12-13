@@ -13,7 +13,7 @@ public class Game {
         deck = new Deck();
         players = new ArrayList<>();
         for (int i = 0; i < numPlayers; i++) {
-            players.add(new Player("Player " + (i + 1)));
+            players.add(new Player("Player " + (i + 1), true));
         }
         initializeGame();
     }

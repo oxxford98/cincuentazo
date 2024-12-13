@@ -29,6 +29,7 @@ public class GameView extends Stage {
         loader.setController(new GameController(numPlayers));
         Parent root = loader.load();
         this.gameController = loader.getController();
+        this.gameController.initGame(numPlayers);
         this.setTitle("Cincuentazo");
         Scene scene = new Scene(root);
         this.getIcons().add(new Image(
