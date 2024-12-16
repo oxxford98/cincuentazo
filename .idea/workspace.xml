@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14963d0e-55c3-46b9-a8c6-231ff2d42e99" name="Changes" comment="finish project">
+    <list default="true" id="14963d0e-55c3-46b9-a8c6-231ff2d42e99" name="Changes" comment="change readme">
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -175,7 +175,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734131781660</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="change readme">
+      <option name="closed" value="true" />
+      <created>1734307663463</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1734307663463</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +193,7 @@
     <MESSAGE value="first commit with interface" />
     <MESSAGE value="add machines and rules" />
     <MESSAGE value="finish project" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish project" />
+    <MESSAGE value="change readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="change readme" />
   </component>
 </project>

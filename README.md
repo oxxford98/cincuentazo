@@ -1,4 +1,4 @@
-# naval
+# Cincuentazo
 Cincuentazo Game
 
 Proyecto realizado para Programacion Orientada a Eventos - Univalle
