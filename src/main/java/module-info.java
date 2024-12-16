@@ -7,4 +7,6 @@ module com.example.hellojavafx {
     opens com.example.hellojavafx to javafx.fxml;
     opens com.example.hellojavafx.controllers to javafx.fxml;
     exports com.example.hellojavafx;
+    exports com.example.hellojavafx.models;
+    exports com.example.hellojavafx.controllers;
 }

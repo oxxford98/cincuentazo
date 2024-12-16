@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="14963d0e-55c3-46b9-a8c6-231ff2d42e99" name="Changes" comment="add machines and rules">
+      <change afterPath="$PROJECT_DIR$/src/test/java/CardTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/DeckTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/PlayerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/allpackages-index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/Main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/controllers/GameController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/controllers/WelcomeController.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/controllers/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/controllers/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/models/Board.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/models/HumanPlayer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/models/MyCanvas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/models/Player.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/models/RobotPlayer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/models/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/models/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/view/GameView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/view/WelcomeView.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/view/alert/AlertBox.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/view/alert/AlertBoxInterface.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/view/alert/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/view/alert/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/view/package-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/com/example/hellojavafx/view/package-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/com.example.hellojavafx/module-summary.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/element-list" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/help-doc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-10.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-11.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-12.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-13.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-14.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-15.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-5.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-6.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-7.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-8.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index-files/index-9.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/jquery-ui.overrides.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/legal/ADDITIONAL_LICENSE_INFO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/legal/ASSEMBLY_EXCEPTION" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/legal/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/legal/jquery.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/legal/jqueryUI.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/member-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/module-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/overview-tree.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/package-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/resources/glass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/resources/x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jquery-3.6.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jquery-ui.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script-dir/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/search.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/serialized-form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/stylesheet.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/tag-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/javadocs/type-search-index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/controllers/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/controllers/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/controllers/WelcomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/controllers/WelcomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/models/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/models/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/models/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/models/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/models/Game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/models/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/models/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/view/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/view/GameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/view/WelcomeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/hellojavafx/view/WelcomeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/hellojavafx/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/hellojavafx/game-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/controllers/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/controllers/GameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/controllers/WelcomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/controllers/WelcomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/game-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/game-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/models/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/models/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/models/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/models/Deck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/models/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/models/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/hellojavafx/models/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;oxxford98&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/oxxford98/cincuentazo.git&quot;,
+    &quot;accountId&quot;: &quot;c7fd9aad-cd28-4040-bfba-69ed6af239ce&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2p1cwZAr0psY2N08xqM788lTMii" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Cincuentazo.executor": "Run",
+    "Application.Main.executor": "Run",
+    "JUnit.CardTest.executor": "Run",
+    "JUnit.CardTest.testCardConstructorAndGetters.executor": "Run",
+    "JUnit.CardTest.testGetImgForDifferentSuits.executor": "Run",
+    "JUnit.CardTest.testToString.executor": "Run",
+    "JUnit.DeckTest.executor": "Run",
+    "JUnit.DeckTest.testShuffle.executor": "Run",
+    "JUnit.GameControllerTest.executor": "Run",
+    "JUnit.PlayerTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "game-controller",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.Cincuentazo">
+    <configuration name="Cincuentazo" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.example.hellojavafx.Main" />
+      <module name="HelloJavaFX" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HelloJavaFX" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CardTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeckTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HelloJavaFX" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="DeckTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HelloJavaFX" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Cincuentazo" />
+      <item itemvalue="JUnit.DeckTest" />
+      <item itemvalue="JUnit.PlayerTest" />
+      <item itemvalue="JUnit.CardTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DeckTest" />
+        <item itemvalue="JUnit.PlayerTest" />
+        <item itemvalue="JUnit.CardTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.21565.193" />
+        <option value="bundled-js-predefined-d6986cc7102b-e768b9ed790e-JavaScript-IU-243.21565.193" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14963d0e-55c3-46b9-a8c6-231ff2d42e99" name="Changes" comment="" />
+      <created>1731937262026</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731937262026</updated>
+      <workItem from="1731937264237" duration="1361000" />
+      <workItem from="1732416773424" duration="1000" />
+      <workItem from="1734064957559" duration="2350000" />
+      <workItem from="1734100936262" duration="8495000" />
+      <workItem from="1734112724031" duration="351000" />
+      <workItem from="1734113217019" duration="16044000" />
+      <workItem from="1734296519291" duration="5557000" />
+      <workItem from="1734302119927" duration="5174000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit with interface">
+      <option name="closed" value="true" />
+      <created>1734112767719</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734112767719</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add machines and rules">
+      <option name="closed" value="true" />
+      <created>1734131781660</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1734131781660</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit with interface" />
+    <MESSAGE value="add machines and rules" />
+    <option name="LAST_COMMIT_MESSAGE" value="add machines and rules" />
+  </component>
+</project>
