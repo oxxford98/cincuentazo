@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 /**
- * Representa la vista de bienvenida del juego de Sudoku.
+ * Representa la vista de bienvenida del juego de Cincuentazo.
  */
 public class WelcomeView extends Stage {
 

@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 /**
- * Representa la vista del juego de Sudoku.
+ * Representa la vista del juego de Cincuentazo.
  */
 public class GameView extends Stage {
 

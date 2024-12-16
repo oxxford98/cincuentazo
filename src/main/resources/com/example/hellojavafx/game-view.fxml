@@ -68,7 +68,7 @@
             </Button>
          </children>
       </Pane>
-      <Button fx:id="cardHuman0" onAction="#handleCardHuman0Click" layoutX="577.0" layoutY="422.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="92.0">
+      <Button fx:id="cardHuman0" layoutX="577.0" layoutY="422.0" mnemonicParsing="false" onAction="#handleCardHuman0Click" prefHeight="144.0" prefWidth="92.0">
          <graphic>
             <ImageView fx:id="cardView00" fitHeight="152.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -77,7 +77,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="cardHuman1" onAction="#handleCardHuman1Click" layoutX="475.0" layoutY="422.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="92.0">
+      <Button fx:id="cardHuman1" layoutX="475.0" layoutY="422.0" mnemonicParsing="false" onAction="#handleCardHuman1Click" prefHeight="144.0" prefWidth="92.0">
          <graphic>
             <ImageView fx:id="cardView01" fitHeight="152.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -86,7 +86,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="cardHuman2" onAction="#handleCardHuman2Click" layoutX="373.0" layoutY="422.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="92.0">
+      <Button fx:id="cardHuman2" layoutX="373.0" layoutY="422.0" mnemonicParsing="false" onAction="#handleCardHuman2Click" prefHeight="144.0" prefWidth="92.0">
          <graphic>
             <ImageView fx:id="cardView02" fitHeight="152.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -95,7 +95,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="cardHuman3" onAction="#handleCardHuman3Click" layoutX="271.0" layoutY="422.0" mnemonicParsing="false" prefHeight="144.0" prefWidth="92.0">
+      <Button fx:id="cardHuman3" layoutX="271.0" layoutY="422.0" mnemonicParsing="false" onAction="#handleCardHuman3Click" prefHeight="144.0" prefWidth="92.0">
          <graphic>
             <ImageView fx:id="cardView03" fitHeight="152.0" fitWidth="112.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -213,15 +213,13 @@
             <Image url="@images/back-card.png" />
          </image>
       </ImageView>
-      <Button layoutX="803.0" layoutY="431.0" mnemonicParsing="false" prefHeight="128.0" prefWidth="69.0">
-         <graphic>
-            <ImageView fitHeight="123.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@images/back-card.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Button>
-      <Label layoutX="807.0" layoutY="565.0" style="-fx-background-color: black;" text="Tomar una carta" textFill="WHITE" />
+      <Pane layoutX="751.0" layoutY="473.0" prefHeight="103.0" prefWidth="252.0" style="-fx-background-color: black; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="22.0" layoutY="23.0" text="Cartas en el Mazo:" textFill="WHITE" />
+            <Label layoutX="38.0" layoutY="61.0" text="Jugador Actual:" textFill="WHITE" />
+            <Label fx:id="lblCountDeck" layoutX="140.0" layoutY="25.0" text="01" textFill="WHITE" />
+            <Label fx:id="lblCurrentPlayer" layoutX="140.0" layoutY="61.0" text="Humano" textFill="WHITE" />
+         </children>
+      </Pane>
    </children>
 </Pane>

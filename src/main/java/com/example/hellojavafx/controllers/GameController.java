@@ -1,4 +1,5 @@
 package com.example.hellojavafx.controllers;
+
 import com.example.hellojavafx.models.Card;
 import com.example.hellojavafx.models.Deck;
 import com.example.hellojavafx.models.Player;
@@ -28,7 +29,7 @@ public class GameController {
     @FXML
     private Pane paneView3;
     @FXML
-    private Label labelScore;
+    private Label labelScore, lblCurrentPlayer, lblCountDeck;
     @FXML
     private ImageView cardView00, cardView01, cardView02, cardView03;
     @FXML
@@ -47,7 +48,9 @@ public class GameController {
     private int currentPlayerIndex = 0, score = 0;
 
     /**
-     * Constructs a new GameController with the specified parameters.
+     * Constructs a new GameController with the specified number of players.
+     *
+     * @param numPlayers the number of players in the game
      */
     public GameController(int numPlayers) {
         players = new ArrayList<>();
@@ -62,23 +65,30 @@ public class GameController {
     public void initialize() {
     }
 
+    /**
+     * Updates the score label, current player label, and deck count label.
+     */
     private void updateScoreLabel() {
         labelScore.setText(String.valueOf(score));
+        lblCurrentPlayer.setText(players.get(currentPlayerIndex).getName());
+        lblCountDeck.setText(String.valueOf(deck.getRemainingCards()));
     }
 
+    /**
+     * Initializes the game with the specified number of players.
+     *
+     * @param numPlayers the number of players in the game
+     */
     public void initGame(int numPlayers) {
-        // Initialize the game with the specified number of players
         paneView1.setVisible(numPlayers >= 2);
         paneView2.setVisible(numPlayers >= 3);
         paneView3.setVisible(numPlayers == 4);
 
-        // Create players
         players.add(new Player("Human", false));
         for (int i = 1; i < numPlayers; i++) {
             players.add(new Player("Machine " + i, true));
         }
 
-        // Deal 4 cards to each player
         for (Player player : players) {
             for (int j = 0; j < 4; j++) {
                 player.drawCard(deck);
@@ -95,8 +105,11 @@ public class GameController {
         drawCardsBoard();
     }
 
+    /**
+     * Draws the cards on the game board.
+     */
     public void drawCardsBoard() {
-        boolean showMachineCards = true;
+        boolean showMachineCards = false;
 
         List<Card> player0Hand = players.get(0).getHand();
         cardView00.setImage(new Image(getClass().getResourceAsStream(player0Hand.get(0).getImg())));
@@ -129,19 +142,37 @@ public class GameController {
         }
     }
 
+    /**
+     * Processes the next turn for the current player.
+     *
+     * @param card the card played by the current player
+     */
     public void nextTurn(Card card) {
         blockHumanCards(true);
+        boolean next = true;
         if (card != null) {
-            imageCardPrincipal.setImage(new Image(getClass().getResourceAsStream(card.getImg())));
-            score += card.getValue();
-            updateScoreLabel();
-            deck.addCardToUsed(card);
-            drawCardsBoard();
+            if (players.get(0).canPlayCard(score, card)) {
+                imageCardPrincipal.setImage(new Image(getClass().getResourceAsStream(card.getImg())));
+                score += card.getValue();
+                updateScoreLabel();
+                deck.addCardToUsed(card);
+                drawCardsBoard();
+            } else {
+                new AlertBox().showAlert("Error", "You cannot play that card", "Choose another one");
+                next = false;
+            }
         }
-        currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
-        processNextPlayer();
+        if (next) {
+            currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
+            processNextPlayer();
+        }
     }
 
+    /**
+     * Blocks or unblocks the human player's cards.
+     *
+     * @param status true to block the cards, false to unblock
+     */
     public void blockHumanCards(boolean status) {
         cardHuman0.setDisable(status);
         cardHuman1.setDisable(status);
@@ -149,35 +180,72 @@ public class GameController {
         cardHuman3.setDisable(status);
     }
 
+    /**
+     * Processes the next player in the game.
+     */
     private void processNextPlayer() {
-        if (currentPlayerIndex == 0) {
-            blockHumanCards(false);
-        } else if (currentPlayerIndex < players.size() && currentPlayerIndex > 0) {
-            if (players.get(currentPlayerIndex).getIsDeleted()) {
-                hidePaneView(currentPlayerIndex);
-                currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
-                processNextPlayer();
-            } else {
-                PauseTransition pause = new PauseTransition(Duration.seconds(2));
-                pause.setOnFinished(event -> {
-                    Card cardMachine = playTurnMachine();
-                    if (cardMachine != null) {
-                        imageCardPrincipal.setImage(new Image(getClass().getResourceAsStream(cardMachine.getImg())));
-                        score += cardMachine.getValue();
-                        updateScoreLabel();
-                        deck.addCardToUsed(cardMachine);
-                        drawCardsBoard();
+        Runnable task = () -> {
+            Player winner = checkForWinner();
+            if (winner != null) {
+                Platform.runLater(() -> {
+                    new AlertBox().showAlert("Winner", "We have a winner!", "The winner is " + winner.getName());
+                });
+                return;
+            }
+            Platform.runLater(() -> {
+                updateScoreLabel();
+            });
+            if (currentPlayerIndex == 0) {
+                if (!players.get(0).getIsDeleted()) {
+                    if (!hasPlayableCard(players.get(0))) {
+                        players.get(0).setDeleted(true);
+                        Platform.runLater(() -> {
+                            new AlertBox().showAlert("Error", "You have been eliminated", "You have no cards to play.");
+                        });
+                        currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
+                        processNextPlayer();
+                    } else {
+                        blockHumanCards(false);
                     }
+                } else {
                     currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
                     processNextPlayer();
-                });
-                pause.play();
+                }
+            } else if (currentPlayerIndex < players.size() && currentPlayerIndex > 0) {
+                if (players.get(currentPlayerIndex).getIsDeleted()) {
+                    hidePaneView(currentPlayerIndex);
+                    currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
+                    processNextPlayer();
+                } else {
+                    PauseTransition pause = new PauseTransition(Duration.seconds(2));
+                    pause.setOnFinished(event -> {
+                        Card cardMachine = playTurnMachine();
+                        if (cardMachine != null) {
+                            imageCardPrincipal.setImage(new Image(getClass().getResourceAsStream(cardMachine.getImg())));
+                            score += cardMachine.getValue();
+                            updateScoreLabel();
+                            deck.addCardToUsed(cardMachine);
+                            drawCardsBoard();
+                        }
+                        currentPlayerIndex = (currentPlayerIndex + 1) % players.size();
+                        processNextPlayer();
+                    });
+                    pause.play();
+                }
+            } else {
+                drawCardsBoard();
             }
-        } else {
-            drawCardsBoard();
-        }
+        };
+
+        Thread thread = new Thread(task);
+        thread.start();
     }
 
+    /**
+     * Hides the pane view for the specified player index.
+     *
+     * @param playerIndex the index of the player
+     */
     private void hidePaneView(int playerIndex) {
         switch (playerIndex) {
             case 1:
@@ -194,6 +262,11 @@ public class GameController {
         }
     }
 
+    /**
+     * Plays the turn for the machine player.
+     *
+     * @return the card played by the machine player
+     */
     public Card playTurnMachine() {
         Player currentPlayer = players.get(currentPlayerIndex);
         if (currentPlayer.getIsDeleted()) {
@@ -210,11 +283,31 @@ public class GameController {
         }
         currentPlayer.setDeleted(true);
         Platform.runLater(() -> {
-            new AlertBox().showAlert("Error", "Ha sido eliminado un Jugador", "El jugador " + currentPlayer.getName() + " ha sido eliminado.");
+            new AlertBox().showAlert("Error", "A player has been eliminated", "Player " + currentPlayer.getName() + " has been eliminated.");
         });
         return null;
     }
 
+    /**
+     * Checks if the player has a playable card.
+     *
+     * @param player the player to check
+     * @return true if the player has a playable card, false otherwise
+     */
+    private boolean hasPlayableCard(Player player) {
+        for (Card card : player.getHand()) {
+            if (player.canPlayCard(score, card)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Handles the click event for the first human card.
+     *
+     * @throws InterruptedException if the thread is interrupted
+     */
     @FXML
     private void handleCardHuman0Click() throws InterruptedException {
         System.out.println("Card Human 0 clicked");
@@ -230,6 +323,11 @@ public class GameController {
         }
     }
 
+    /**
+     * Handles the click event for the second human card.
+     *
+     * @throws InterruptedException if the thread is interrupted
+     */
     @FXML
     private void handleCardHuman1Click() throws InterruptedException {
         System.out.println("Card Human 1 clicked");
@@ -245,6 +343,11 @@ public class GameController {
         }
     }
 
+    /**
+     * Handles the click event for the third human card.
+     *
+     * @throws InterruptedException if the thread is interrupted
+     */
     @FXML
     private void handleCardHuman2Click() throws InterruptedException {
         System.out.println("Card Human 2 clicked");
@@ -260,6 +363,11 @@ public class GameController {
         }
     }
 
+    /**
+     * Handles the click event for the fourth human card.
+     *
+     * @throws InterruptedException if the thread is interrupted
+     */
     @FXML
     private void handleCardHuman3Click() throws InterruptedException {
         System.out.println("Card Human 3 clicked");
@@ -272,6 +380,29 @@ public class GameController {
         } else {
             currentPlayer.setDeleted(true);
             nextTurn(null);
+        }
+    }
+
+    /**
+     * Checks for a winner in the game.
+     *
+     * @return the winning player, or null if there is no winner yet
+     */
+    private Player checkForWinner() {
+        Player winner = null;
+        int activePlayers = 0;
+
+        for (Player player : players) {
+            if (!player.getIsDeleted()) {
+                activePlayers++;
+                winner = player;
+            }
+        }
+
+        if (activePlayers == 1) {
+            return winner;
+        } else {
+            return null;
         }
     }
 }
